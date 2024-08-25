@@ -19,8 +19,8 @@ mongoose.connect('mongodb+srv://tap:tap@tap.6bl8xah.mongodb.net/tap', {
 
 // Middleware
 app.use(cors({
-    origin: 'http://localhost:5174' // Allow only requests from this origin
-  }));
+  origin: ['http://localhost:5174', 'https://savealife-rouge.vercel.app'] // Allow requests from both origins
+}));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
